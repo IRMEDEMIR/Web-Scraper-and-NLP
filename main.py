@@ -20,8 +20,8 @@ driver = webdriver.Chrome(service=service, options=chrome_options)
 start_time = time.time()
 
 # Web sitesini aç
-#url = "https://kutuphane.isparta.edu.tr/"
-url =  "https://masalist.com/kisa-hikayeler/"
+url = "https://kutuphane.isparta.edu.tr/"
+#url =  "https://masalist.com/kisa-hikayeler/"
 driver.get(url)
 
 # Yükleme süresi
@@ -70,10 +70,10 @@ filtered_words = [word.lower() for word in words if word.isalpha() and word.lowe
 
 # Eşsiz kelimeleri sayma
 unique_words = set(filtered_words)
-print(f"Farklı kelime sayısı (stopwords hariç, kökleri alınmış): {len(unique_words)}")
+print(f"Farklı kelime sayısı: {len(unique_words)}")
 
 # Kelimeleri yazdır
-print("Kullanılan kelimeler (stopwords hariç, kökleri alınmış):")
+print("Kullanılan kelimeler:")
 print(list(set(filtered_words)))  # Benzersiz kelimeleri listele
 
 #print(text)
